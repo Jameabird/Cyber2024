@@ -1,0 +1,161 @@
+.wrapper {
+    position: relative;
+    width: 410px;
+    height: 410px; /* เพิ่มความสูงเล็กน้อยเพื่อรองรับฟิลด์ยืนยันรหัสผ่าน */
+    background: transparent;
+    border: 2px solid rgba(255,255,255, .1);
+    backdrop-filter: blur(30px);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(7, 7, 7, 0.1);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    transition: height 0.2s ease; 
+}
+
+.wrapper.active {
+    height: 550px; /* เพิ่มความสูงสำหรับฟอร์มที่แอคทีฟ */
+}
+
+.wrapper.active-forgot {
+    height: 350px; 
+}
+
+.wrapper .form-box {
+    width: 100%;
+    padding: 40px;
+    position: absolute;
+    transition: transform 0.18s ease;
+}
+
+.wrapper .form-box.login {
+    transform: translateX(0);
+}
+
+.wrapper.active .form-box.login {
+    transform: translateX(-400px);
+}
+
+.wrapper .form-box.register {
+    transform: translateX(400px);
+}
+
+.wrapper.active .form-box.register {
+    transform: translateX(0);
+}
+
+.wrapper .form-box.forgot-password {
+    transform: translateX(400px);
+}
+
+.wrapper.active-forgot .form-box.forgot-password {
+    transform: translateX(0); 
+}
+
+form h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+form .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent; /* รักษาพื้นหลังให้โปร่งใส */
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #ffffff;
+    padding: 20px 45px 20px 20px;
+    transition: background 0.3s ease; /* เพิ่มการเปลี่ยนแปลงพื้นหลัง */
+}
+
+.input-box input:focus {
+    background: rgba(255, 255, 255, 0.1); /* เปลี่ยนสีพื้นหลังเมื่อกล่องมีโฟกัส */
+}
+
+
+.input-box input::placeholder {
+    color: #fff;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 20px;
+    top: 400%;
+    transform: translateY(-50%);
+    font-size: 16px;
+}
+
+form .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+
+.remember-forgot label input {
+    accent-color: #fff;
+    margin-right: 4px;
+}
+
+.remember-forgot a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+form button {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 700;
+}
+
+form .register-link {
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.register-link p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link p a:hover {
+    text-decoration: underline;
+}
+
+
+.input-box.confirm-password {
+    margin: 30px 0; 
+}
+.input-box .icon {
+    position: absolute;
+    right: 20px; /* ปรับค่านี้เพื่อลดหรือลดระยะห่างจากขอบขวา */
+    top: 55%; /* ยังคงอยู่ที่กลางแนวตั้ง */
+    transform: translateY(-50%);
+    font-size: 16px;
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เมื่อเลื่อนเมาส์ไปที่ไอคอน */
+}

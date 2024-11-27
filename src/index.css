@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url('./Components/Assets/bg01.png')
+  no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+/* Welcome.css */
+.welcome-container {
+  padding: 500px;
+  background-color: rgba(255, 255, 255, 0.8); /* เพิ่มสีพื้นหลังบางส่วนเพื่อให้ข้อความอ่านง่ายขึ้น */
+  background-image: url('./Components/Assets/bg02.jpg'); /* ตั้งค่าภาพพื้นหลัง */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
